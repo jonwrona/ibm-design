@@ -1,0 +1,17 @@
+{
+    "name": "ibm-design",
+    "version": "1.0.0",
+    "description": "Front-end built for IBM Design interview process.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "jonathan-wrona",
+    "dependencies": {
+        "express": "^4.13.3",
+        "morgan": "^1.6.1"
+    },
+    "engines": {
+        "node": "4.1.1"
+    }
+}
