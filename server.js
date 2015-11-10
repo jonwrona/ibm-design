@@ -14,5 +14,5 @@ app.get('*', function(req, res) {
 });
 
 // start the server
-app.listen(7070);
-console.log('server running on port 7070');
+app.listen(5000);
+console.log('server running on port 5000');
