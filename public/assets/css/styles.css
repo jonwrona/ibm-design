@@ -1,19 +1,25 @@
 .title {
-	font-family: 'Leckerli One';
+    font-family: 'Leckerli One';
 }
 
 .max-width {
-	max-width: 864px;
+    max-width: 864px;
 }
 
 .sidenav-btn {
-	text-align: left;
+    text-align: left;
 }
 
 .nav-header > img {
-	padding: 30px 0;
+    padding: 30px 0;
 }
 
 md-divider.wide {
-	margin: 10px 0;
+    margin: 10px 0;
+}
+
+.temp {
+    font-size: 500%;
+    font-weight: 700;
+    margin: 10px 0;
 }
