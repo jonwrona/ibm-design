@@ -9,6 +9,10 @@ angular.module('app', [
         .when('/', {
             templateUrl: 'app/views/events.html'
         })
+        // weather
+        .when('/weather', {
+            templateUrl: 'app/views/weather.html'
+        })
         // map
         .when('/map', {
             templateUrl: 'app/views/map.html'
@@ -43,33 +47,32 @@ angular.module('app', [
         }
     };
 
+    $scope.eventsList = [{
+        name: "IBM Design Interview",
+        date: "November 13th, 2015 @ 7:30AM",
+        address: "11501 Burnet Road, Austin, TX 78758",
+        loc: {lat: 30.401917, lon: -97.715750},
+        img: "http://placehold.it/800x300",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id mollis nisi. Quisque vitae molestie lectus. Ut aliquet nunc a elit pulvinar, ac efficitur quam scelerisque. Nulla feugiat facilisis finibus. Fusce et diam arcu. Donec dapibus libero eu auctor laoreet. Aliquam auctor, urna quis rhoncus pharetra, orci quam imperdiet lacus, eu pretium nunc felis at metus. Sed a nulla massa. Donec ut efficitur ex. Nulla venenatis eget quam a auctor."
+    }, {
+        name: "Residence Inn",
+        date: "November 12th, 2015 @ 4:30PM",
+        address: "300 E 4th St, Austin, TX 78701",
+        loc: {lat: 30.265651, lon: -97.740466},
+        img: "http://placehold.it/800x300",
+        desc: "Nullam fringilla nisl vel ex fringilla, cursus gravida ipsum laoreet. Duis efficitur mi ac justo tempus varius. Pellentesque in eleifend lacus. Sed auctor elit eget tempor aliquam. Sed molestie finibus molestie. Cras eget lectus vitae orci elementum gravida vulputate et turpis. Nam sit amet sollicitudin augue, non maximus nisi. Curabitur non placerat est, et iaculis libero."
+    }, {
+        name: "Test Event",
+        date: "November 14th, 2015 @ 12:00PM",
+        address: "4612 Avenue D, Austin, TX 78751",
+        loc: {lat: 30.312023, lon: -97.727818},
+        img: "http://placehold.it/800x400",
+        desc: "Proin eleifend blandit vehicula. Quisque sed elit auctor, ultricies velit sed, vulputate lectus. Nulla suscipit sem eget ante laoreet, et imperdiet velit convallis. Duis molestie est felis, vitae venenatis ex dignissim a. In hac habitasse platea dictumst. Pellentesque id nunc maximus, vestibulum dui eu, porttitor elit. Mauris ut lectus sollicitudin, porttitor ligula eu, ullamcorper enim. Maecenas vel diam dapibus, fringilla felis vel, interdum massa. Aliquam erat volutpat. Aliquam in urna ut mi lacinia posuere. Praesent rutrum, dui tincidunt laoreet suscipit, purus nisl facilisis ante, eu viverra justo mi tempor risus. Donec et nunc ut massa feugiat vulputate. Ut at convallis libero. Quisque aliquam efficitur sagittis. Phasellus suscipit eu justo non elementum. Aliquam et ipsum congue sapien blandit convallis sed non quam."
+    }];
+
     $(window).resize(function() {
         var total = $(window).height();
         var toolbar = $("#toolbar").height();
         $(".angular-google-map-container").css('height', total - toolbar);
     });
-}).controller('EventsCtrl', function($scope) {
-    $scope.eventsList = [{
-        name: "Event 1",
-        loc: "2134 Blah Street, Austin, TX",
-        img: "http://placehold.it/800x300",
-        desc: "The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..."
-    }, {
-        name: "Event 1",
-        loc: "2134 Blah Street, Austin, TX",
-        img: "http://placehold.it/800x300",
-        desc: "The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..."
-    }, {
-        name: "Event 1",
-        loc: "2134 Blah Street, Austin, TX",
-        img: "http://placehold.it/800x400",
-        desc: "The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..."
-    }, {
-        name: "Event 1",
-        loc: "2134 Blah Street, Austin, TX",
-        img: "http://placehold.it/800x200",
-        desc: "The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well..."
-    }];
-
-    console.log($scope.eventsList);
 });

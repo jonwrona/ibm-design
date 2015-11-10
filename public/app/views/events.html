@@ -1,14 +1,17 @@
-<div layout="row" layout-padding ng-controller="EventsCtrl">
+<div layout="row" layout-padding>
     <div layout="column" class="max-width">
         <md-card ng-repeat="event in eventsList">
             <img ng-src="{{event.img}}" class="md-card-image" alt="Washed Out">
             <md-card-content>
                 <h2 class="md-title">{{event.name}}</h2>
                 <p>
+                    <small><em>{{event.date}}</em></small>
+                </p>
+                <p>
                     {{event.desc}}
                 </p>
-                <p class="event-loc">
-                    {{event.loc}}
+                <p>
+                    <strong>{{event.address}}</strong>
                 </p>
             </md-card-content>
         </md-card>
