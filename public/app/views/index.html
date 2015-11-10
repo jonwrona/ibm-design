@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Hello, Austin!</title>
+    <base href="/">
+    <!-- CSS -->
+    <link href='//fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body ng-app="app" ng-controller="AppCtrl" id="popupContainer">
+    <md-content>
+        <md-toolbar id="toolbar" class="md-whiteframe-z1">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                    <i class="fa fa-bars"></i>
+                </md-button>
+                <h2 class="title"><span>Hello, Austin!</span></h2>
+                <div flex></div>
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="showAbout()">
+                    <i class="fa fa-question-circle"></i>
+                    <md-tooltip md-direction="left">
+                        About
+                    </md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <div ng-view></div>
+    </md-content>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z3" md-component-id="left">
+        <header class="nav-header">
+            <img src="assets/img/austin.jpg">
+        </header>
+        <md-content layout-padding layout="column">
+            <md-button class="sidenav-btn md-primary md-raised" ng-href="/" ng-click="toggleLeft()">&emsp;<i class="fa fa-calendar fa-fw"></i>&emsp;Events</md-button>
+            <md-button class="sidenav-btn md-primary md-raised" ng-href="/weather" ng-click="toggleLeft()">&emsp;<i class="fa fa-cloud fa-fw"></i>&emsp;Weather</md-button>
+            <md-button class="sidenav-btn md-primary md-raised" ng-href="/map" ng-click="toggleLeft()">&emsp;<i class="fa fa-map fa-fw"></i>&emsp;Map</md-button>
+            <md-divider class="wide" inset></md-divider>
+            <md-button class="sidenav-btn" ng-href="https://twitter.com/" target="_blank" ng-click="toggleLeft()">&emsp;<i class="fa fa-twitter fa-fw"></i>&emsp;Twitter</md-button>
+            <md-button class="sidenav-btn" ng-href="https://www.facebook.com/" target="_blank" ng-click="toggleLeft()">&emsp;<i class="fa fa-facebook fa-fw"></i>&emsp;Facebook</md-button>
+            <md-button class="sidenav-btn" ng-href="https://www.youtube.com/" target="_blank" ng-click="toggleLeft()">&emsp;<i class="fa fa-youtube fa-fw"></i>&emsp;Youtube</md-button>
+        </md-content>
+    </md-sidenav>
+    <!-- Angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+    <script src="assets/js/lodash.min.js"></script>
+    <script src="assets/js/angular-simple-logger.js"></script>
+    <script src="//rawgit.com/angular-ui/angular-google-maps/2.2.1/dist/angular-google-maps.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+
+</html>
