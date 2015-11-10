@@ -3,6 +3,8 @@ var app = express();
 var morgan = require('morgan');
 var path = require('path');
 
+app.set('port', (process.env.PORT || 5000));
+
 // set the static files location
 app.use(express.static(__dirname + '/public'));
 
@@ -14,5 +16,6 @@ app.get('*', function(req, res) {
 });
 
 // start the server
-app.listen(5000);
-console.log('server running on port 5000');
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
